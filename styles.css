@@ -457,45 +457,29 @@ a:hover { color: var(--c-atlantic-l); }
   margin: 18px 0 0;
   max-width: 480px;
 }
-.rmm-contact-meta { display: flex; gap: 56px; margin-top: 40px; padding-top: 28px; border-top: 1px solid var(--line-1); }
-.rmm-contact-meta p {
-  font: 400 16px/1.4 var(--font-sans);
-  color: var(--c-ink);
-  margin: 6px 0 0;
-}
-
-.rmm-contact-form {
+.rmm-contact-card {
   background: var(--c-white);
   border: 1px solid var(--line-1);
   padding: 36px 40px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  align-items: flex-start;
+  gap: 18px;
 }
-.rmm-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-.rmm-field { display: flex; flex-direction: column; gap: 6px; }
-.rmm-field-label {
-  font: 500 11px/1.3 var(--font-sans);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--fg-3);
-}
-.rmm-field input,
-.rmm-field textarea {
-  font: 400 15px/1.5 var(--font-sans);
+.rmm-contact-card h3 {
+  font: 500 30px/1.18 var(--font-sans);
+  letter-spacing: -0.016em;
   color: var(--c-ink);
-  background: var(--c-white);
-  border: 1px solid var(--line-2);
-  padding: 12px 14px;
-  border-radius: 4px;
-  outline: none;
-  transition: border-color var(--dur-base) var(--ease-standard);
-  font-family: var(--font-sans);
+  margin: 0;
+  max-width: 420px;
 }
-.rmm-field input:focus,
-.rmm-field textarea:focus { border-color: var(--c-atlantic); }
+.rmm-contact-card p {
+  font: 400 16px/1.65 var(--font-sans);
+  color: var(--fg-2);
+  margin: 0 0 8px;
+  max-width: 460px;
+}
 .rmm-field-help { font: 400 13px/1.4 var(--font-sans); color: var(--fg-4); margin-top: 2px; }
-.rmm-form-foot { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 6px; }
 
 /* --- Footer -------------------------------------------------- */
 .rmm-footer {
@@ -538,7 +522,6 @@ a:hover { color: var(--c-atlantic-l); }
   .rmm-founder-portrait { width: 100%; max-width: 360px; }
   .rmm-audience-body { flex-direction: column; gap: 12px; }
   .rmm-audience-name { width: 100%; }
-  .rmm-form-row { grid-template-columns: 1fr; }
   .rmm-section { padding: 80px 0; }
   .rmm-nav-links { gap: 18px; }
   .rmm-nav-inner { flex-wrap: wrap; }
@@ -549,7 +532,7 @@ a:hover { color: var(--c-atlantic-l); }
   .rmm-h-display { font-size: 30px; }
   .rmm-punch { font-size: 32px; }
   .rmm-service { padding: 28px 24px; }
-  .rmm-contact-form { padding: 28px 24px; }
+  .rmm-contact-card { padding: 28px 24px; }
   .rmm-section { padding: 64px 0; }
   .rmm-hero { padding: 80px 0 96px; }
   .rmm-service-foot { flex-direction: column; gap: 8px; }

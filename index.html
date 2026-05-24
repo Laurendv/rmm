@@ -62,7 +62,13 @@
         </p>
       </div>
       <div class="rmm-cta-row">
-        <a href="#contact" class="rmm-btn rmm-btn-primary">Request a confidential conversation</a>
+        <a
+          href="https://tally.so/r/J9WXNX"
+          class="rmm-btn rmm-btn-primary"
+          data-rmm-tally-popup
+          target="_blank"
+          rel="noopener"
+        >Request a confidential conversation</a>
         <a href="#services" class="rmm-btn rmm-btn-secondary">Explore how we work</a>
       </div>
     </div>
@@ -428,31 +434,22 @@
         </p>
       </div>
 
-      <form class="rmm-contact-form">
-        <div class="rmm-form-row">
-          <label class="rmm-field">
-            <span class="rmm-field-label">Name</span>
-            <input type="text" name="name" required>
-          </label>
-          <label class="rmm-field">
-            <span class="rmm-field-label">Organisation</span>
-            <input type="text" name="organisation" placeholder="Company, institution, or NGO">
-          </label>
-        </div>
-        <label class="rmm-field">
-          <span class="rmm-field-label">Role</span>
-          <input type="text" name="role" placeholder="e.g. General Counsel, Director of Sustainability, Accountability Officer">
-        </label>
-        <label class="rmm-field">
-          <span class="rmm-field-label">The situation</span>
-          <textarea name="situation" rows="4" placeholder="A short outline — current process, parties involved, urgency. Confidential."></textarea>
-          <span class="rmm-field-help">Everything submitted is treated as strictly confidential.</span>
-        </label>
-        <div class="rmm-form-foot">
-          <button type="submit" class="rmm-btn rmm-btn-primary">Request a scoping call</button>
-          <span class="rmm-field-help">Conflict checks performed before any commitment.</span>
-        </div>
-      </form>
+      <div class="rmm-contact-card">
+        <span class="rmm-eyebrow">Start the process</span>
+        <h3>Request a confidential scoping call</h3>
+        <p>
+          Share a short outline through the secure form. We will review the procedural context and complete
+          conflict checks before any engagement.
+        </p>
+        <a
+          href="https://tally.so/r/J9WXNX"
+          class="rmm-btn rmm-btn-primary"
+          data-rmm-tally-popup
+          target="_blank"
+          rel="noopener"
+        >Open confidential form</a>
+        <span class="rmm-field-help">Opens in a secure Tally form. The link opens in a new tab if the popup is unavailable.</span>
+      </div>
     </div>
   </section>
 
@@ -503,8 +500,21 @@
   </div>
 </footer>
 
+<script async src="https://tally.so/widgets/embed.js"></script>
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
+
+  document.querySelectorAll('[data-rmm-tally-popup]').forEach(function (trigger) {
+    trigger.addEventListener('click', function (event) {
+      if (!window.Tally || typeof window.Tally.openPopup !== 'function') return;
+
+      event.preventDefault();
+      window.Tally.openPopup('J9WXNX', {
+        layout: 'modal',
+        width: 700
+      });
+    });
+  });
 </script>
 
 </body>
